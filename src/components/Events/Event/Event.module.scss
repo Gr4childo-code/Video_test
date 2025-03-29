@@ -1,0 +1,15 @@
+.Event {
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  color: var(--background);
+  &__time {
+    font-size: 13px;
+  }
+  &__active {
+    background-color: green;
+  }
+  &__handle {
+    cursor: pointer;
+  }
+}

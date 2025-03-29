@@ -1,14 +1,14 @@
-export interface Event {
+export interface IEvent {
   timestamp: number;
   duration: number;
-  zone: Zone;
+  zone: IZone;
 }
 
-export interface Zone {
+export interface IZone {
   left: number;
   top: number;
   width: number;
   height: number;
 }
 
-export type Events = Event[];
+export type IEvents = IEvent[];

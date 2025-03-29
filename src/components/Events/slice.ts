@@ -1,8 +1,8 @@
-import { Events } from '@/types/types';
+import { IEvents } from '@/types/types';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 export interface EventsState {
-  events: Events;
+  events: IEvents;
 }
 
 const initialState: EventsState = {
@@ -13,7 +13,7 @@ export const eventsSlice = createSlice({
   name: 'events',
   initialState,
   reducers: {
-    setEvents: (state, action: PayloadAction<Events>) => {
+    setEvents: (state, action: PayloadAction<IEvents>) => {
       state.events = action.payload;
     }
   }
