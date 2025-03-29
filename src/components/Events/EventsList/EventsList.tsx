@@ -4,8 +4,10 @@ import { useSelector } from 'react-redux';
 import { getAllEvents } from '../selector';
 import styles from './EventsList.module.scss';
 import Event from '../Event/Event';
-
-const EventsList = () => {
+type Props = {
+  handleEventClick: (timestamp: number) => void;
+};
+const EventsList = ({ handleEventClick }: Props) => {
   const events = useSelector(getAllEvents);
 
   return (
@@ -21,7 +23,7 @@ const EventsList = () => {
         </thead>
         <tbody>
           {events.map(event => (
-            <Event key={event.timestamp} event={event} />
+            <Event key={event.timestamp} event={event} handleEventClick={handleEventClick} />
           ))}
         </tbody>
       </table>

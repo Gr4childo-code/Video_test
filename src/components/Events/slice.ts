@@ -3,10 +3,12 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 export interface EventsState {
   events: IEvents;
+  currentTime: number;
 }
 
 const initialState: EventsState = {
-  events: []
+  events: [],
+  currentTime: 0
 };
 
 export const eventsSlice = createSlice({
@@ -15,8 +17,11 @@ export const eventsSlice = createSlice({
   reducers: {
     setEvents: (state, action: PayloadAction<IEvents>) => {
       state.events = action.payload;
+    },
+    setCurrentTime: (state, action: PayloadAction<number>) => {
+      state.currentTime = action.payload;
     }
   }
 });
 
-export const { setEvents } = eventsSlice.actions;
+export const { setEvents, setCurrentTime } = eventsSlice.actions;
