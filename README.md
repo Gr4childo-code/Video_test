@@ -13,11 +13,13 @@
 git clone https://github.com/your-username/video-analytics.git
 cd video-analytics
 npm install
+```
 
 ## 🚀 Запуск
 
 ```bash
 npm run dev
+```
 
 ## 🛠 Технологии
 
