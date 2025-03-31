@@ -9,8 +9,8 @@
 ## 📦 Установка
 
 ```bash
-git clone https://github.com/your-username/video-analytics.git
-cd video-analytics
+https://github.com/Gr4childo-code/Video_test
+cd Video_test
 npm install
 ```
 
